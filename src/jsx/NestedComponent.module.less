@@ -1,0 +1,39 @@
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.gridLayout {
+  width: 100%;
+  display: grid;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:hover {
+    background-color: #fafafa;
+  }
+}
+
+.itemCellWrap {
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  overflow: hidden;
+}
+
+.itemCell {
+  width: 100%;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+
+.sortableChosen {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: rgba(0, 0, 0, 0.25);
+}
+.nestChecked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

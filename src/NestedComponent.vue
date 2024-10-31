@@ -13,7 +13,6 @@
     <div v-for="el in modelValue" :id="el.name">
       <div :class="['grid-layout', rowClassName?.(el)]" :style="gridLayout">
         <template v-for="(item, index) in columns">
-          <!-- 复选行  -->
           <div
             class="item-cell-wrap nestChecked"
             v-if="item.dataIndex === NEST_CHECKED"
@@ -35,7 +34,6 @@
               ></slot>
             </div>
           </div>
-          <!-- 标签插槽 -->
           <div
             class="item-cell-wrap"
             v-else
@@ -49,6 +47,7 @@
                 />
                 <CaretRightOutlined v-else @click="toggle(el)" />
               </span>
+              
               <slot
                 v-if="$slots[item.dataIndex]"
                 :name="item.dataIndex"
